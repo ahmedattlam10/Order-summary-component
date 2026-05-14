@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop-design](./images/127.0.0.1_5500_screenshot.svg)
+![desktop-design](./images/127.0.0.1_5500_screenshot.png)
 
 
 ### Links
