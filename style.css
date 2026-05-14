@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --h1-clr: hsl(223, 47%, 23%);
+    --bg-card-clr: hsl(0, 0%, 100%);
+    --bg-page-clr: hsl(225, 100%, 94%);
+    --bright-blue-clr: hsl(245, 75%, 52%);
+    --bale-blue-clr: hsl(225, 100%, 98%);
+    --text-clr: hsl(224, 23%, 55%);
+
+    --p-fs: 1rem;
+
+    --medium-fw: 500;
+    --bold-fw: 700;
+    --bolder-fw: 900;
+
+    --br: 1rem
+}
+
+body{
+    margin: 0;
+    font-family: "Red Hat Display", sans-serif;
+    background-color: var(--bg-page-clr);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top ;
+    background-size: contain;
+}
+
+.page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: var(--bg-card-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    border-radius: var(--br);
+    overflow: hidden;
+}
+
+.main-img{
+    display: block;
+    width: 100%;
+}
+
+.content{
+    padding: 0 1rem 2rem;
+}
+.title{
+    font-weight: var(--bolder-fw);
+    color: var(--h1-clr);
+    margin: 2rem 0 0;
+    font-size: 1.75rem;
+}
+
+.description{
+    color: var(--text-clr);
+    font-weight: var(--medium-fw);
+    font-size: var(--p-fs);
+    padding: 0 1rem;
+}
+
+.payment-plan{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bale-blue-clr);
+    border-radius: var(--br);
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    margin: 0 1rem 1.5rem;
+}
+
+.annual-plan-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.annual-plan{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.annual-plan strong{
+    color: var(--h1-clr);
+    font-weight: var(--bolder-fw);
+}
+
+.annual-plan .price{
+    color: var(--text-clr);
+    font-weight: var(--medium-fw);
+}
+
+.change-link{
+    color: var(--bright-blue-clr);
+    font-weight: var(--bolder-fw);
+    transition: color 0.3s;
+}
+
+.change-link:hover, .change-link:focus{
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 0.7);
+}
+
+.change-link:focus-visible{
+    color: hsla(245, 75%, 52%, 0.7);
+    outline: 3px solid var(--h1-clr);
+    outline-offset: 3px;
+}
+
+.payment-button{
+    background-color: var(--bright-blue-clr);
+    display: block;
+    margin-inline: auto;
+    color: var(--bg-card-clr);
+    width: 88%;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: var(--bold-fw);
+    box-shadow: 0 16px 16px -4px hsla(245, 75%, 52%, 0.25);
+    transition: background-color 0.3s 0.2s, transform 0.3s;
+}
+
+.payment-button:hover, .payment-button:focus{
+    background-color: hsla(245, 75%, 52%, 0.7);
+    transform: translateY(-3px);
+}
+
+.payment-button:focus-visible{
+    background-color: hsla(245, 75%, 52%, 0.7);
+    outline: 3px solid var(--h1-clr);
+    outline-offset: 3px;
+}
+
+.cancel-link{
+    text-decoration: none;
+    color: var(--text-clr);
+    font-weight: var(--bolder-fw);
+    transition: color 0.3s;
+}
+
+.cancel-link:hover, .cancel-link:focus{
+    color: var(--h1-clr);
+}
+
+.cancel-link:focus-visible{
+    color: var(--h1-clr);
+    outline: 3px solid var(--h1-clr);
+    outline-offset: 3px;
+}
+
+.change-link, .payment-button, .cancel-link{
+    cursor: pointer;
+}
+@media (min-width: 768px){
+    body{
+        background-image: url(images/pattern-background-desktop.svg);
+    }
+    .card{
+        width: 100%;
+        max-width: 24rem;
+    }
+}
+
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
